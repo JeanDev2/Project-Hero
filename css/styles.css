@@ -1,0 +1,97 @@
+:root{
+	--mainfont: 'Roboto', sans-serif;
+	--secondaryFont: 'Roboto Condensed', sans-serif;
+	--primaryColor: #1B90FC;
+	--white: white;
+	--black:#202020;
+	background-color:var(--primaryColor);
+}
+
+body {
+	font-family: var(--mainfont);
+	margin: 0;
+	background-color:var(--white);
+}
+
+.wrapper {
+
+	max-inline-size: 1664px;
+	margin: auto;
+
+}
+
+p,h1{
+	margin: 0;
+}
+
+.hero h1{
+	font-family: var(--secondaryFont);
+	font-size: 40px;
+	margin-block-end: 8px;
+}
+
+.hero p{
+	font-size: 16px;
+	line-height: 24px;
+	font-family: var(--mainfont);
+	font-weight: 400;
+	margin-block-end: 24px;
+}
+
+img{
+	max-inline-size: 100%;
+	
+}
+button{
+	background: var(--primaryColor);
+	color: var(--white);
+	padding-block: 16px;
+	padding-inline: 32px;
+	border:none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 16px;
+}
+
+.hero-content{
+	display: flex;
+	flex-direction: row;
+	block-size: 768px;
+	align-items: center;
+
+}
+
+.card{
+	max-inline-size: 412px;
+	color: var(--white);
+	z-index: 2;
+	position: relative;
+	margin-inline-start: 128px;
+}
+
+.hero::before{
+	content: '';
+	inline-size: 50%;
+	display: block;
+	/* block-size: 100%; */
+	background: var(--black);
+	position: absolute;
+	inset-block: 0;
+	z-index: 1;
+	clip-path: polygon(0 0,calc(100% - 151px) 0,100% 100%,0 100% );
+}
+
+.hero{
+	
+	background-color:var(--primaryColor);
+	background-color: var(--black);
+	background-image: url('../images/loki.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	clip-path: polygon(0 0,100% 0,100% calc(100% - 128px),0 100%);
+}
+
+
